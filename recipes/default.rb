@@ -5,7 +5,7 @@
 # Copyright (C) 2014 Timehop
 #
 
-package "openjdk-7-jre-headless"
+package "openjdk-7-jre"
 
 config = node["dynamodb-local"]
 
