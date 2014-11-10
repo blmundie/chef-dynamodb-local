@@ -34,7 +34,7 @@ template "/etc/init/dynamodb-local.conf" do
 end
 
 service "dynamodb-local" do
-  provider Chef::Provider::Service::Upstart
+  Chef::Provider::Service::Init::Redhat
   action [ :enable, :start ]
 end
 
