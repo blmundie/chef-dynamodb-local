@@ -5,7 +5,7 @@
 # Copyright (C) 2014 Timehop
 #
 
-package "openjdk-7-jre"
+package "java-1.7.0-openjdk"
 
 config = node["dynamodb-local"]
 
