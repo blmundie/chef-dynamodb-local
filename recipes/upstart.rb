@@ -15,8 +15,7 @@ end
 
 template "/etc/init/dynamodb-local.conf" do
   source 'upstart.conf.erb'
-  cookbook 'dynamodb-local'
-
+  
   owner config["user"]
   group config["user"]
   mode 0644
