@@ -1,8 +1,9 @@
 [Unit]
 Description="<%= @name %>"
+Type=forking
 
 [Service]
-Type=forking
+Type=simple
 ExecStart=/bin/java -Djava.library.path=<%= @path %>/DynamoDBLocal_lib -jar <%= @path %>/DynamoDBLocal.jar -port <%= @port %> >> <%= @log_dir %>/<%= @port %>.log 2>&1
 User=<%= @user %>
 Group=<%= @group %>
