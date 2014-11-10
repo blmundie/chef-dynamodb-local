@@ -13,8 +13,8 @@ directory config["log_dir"] do
   action :create
 end
 
-template "/etc/init/dynamodb-local.conf" do
-  source 'upstart.conf.erb'
+template "/lib/systemd/system/dynamodb-local.service" do
+  source 'systemd.service.erb'
   
   owner config["user"]
   group config["user"]

@@ -1,0 +1,12 @@
+[Unit]
+Description="<%= @name %>"
+
+[Service]
+Type=forking
+ExecStart=java -Djava.library.path=<%= @path %>/DynamoDBLocal_lib -jar <%= @path %>/DynamoDBLocal.jar -port <%= @port %> >> <%= @log_dir %>/<%= @port %>.log 2>&1
+User=<%= @user %>
+Group=<%= @group %>
+
+[Install]
+WantedBy=multi-user.target
+
